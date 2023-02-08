@@ -1,0 +1,21 @@
+/*за допомоги стилів, побудувати сітку по 2 об'єкта в лінію*/
+.users-box {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    justify-content: space-between;
+    margin: 30px 50px;
+    row-gap: 30px;
+}
+
+.user-block {
+    border: 2px solid black;
+    padding: 10px 20px 30px 20px;
+}
+
+.address-block {
+    background: silver;
+    padding: 10px 20px  ;
+}
+h2 {
+    text-align: center;
+}
