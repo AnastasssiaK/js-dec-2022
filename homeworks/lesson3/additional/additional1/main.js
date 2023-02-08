@@ -24,7 +24,7 @@
 // console.log(arr);
 
 // - є масив
-// let array = [2,17,13,6,22,31,45,66,100,-18];
+let array = [2,17,13,6,22,31,45,66,100,-18];
 // 1. перебрати його циклом while
 // let i = 0;
 // while (i < array.length) {
@@ -80,7 +80,7 @@
 // 5. перебрати циклом while та вивести  числа тільки парні  значення
 // let i = 0;
 // while (i < array.length) {
-//     if (i % 2 === 0 && i !== 0) {
+//     if (array[i] % 2 === 0 && i !== 0) {
 //         console.log(array[i]);
 //     }
 //     i++;
@@ -88,7 +88,7 @@
 
 // let i = array.length - 1;
 // while (i >= 0) {
-//     if (i % 2 === 0 && i !== 0) {
+//     if (array[i] % 2 === 0 && i !== 0) {
 //         console.log(array[i]);
 //     }
 //     i--;
@@ -96,13 +96,13 @@
 
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
 // for (let i = 0; i < array.length; i++) {
-//     if (i % 2 === 0 && i !== 0) {
+//     if (array[i] % 2 === 0 && array[i] !== 0) {
 //         console.log(array[i]);
 //     }
 // }
-
+//
 // for (let i = array.length - 1; i >= 0; i--) {
-//     if (i % 2 === 0 && i !== 0) {
+//     if (array[i] % 2 === 0 && array[i] !== 0) {
 //         console.log(array[i]);
 //     }
 // }
