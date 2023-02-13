@@ -103,6 +103,7 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
+
 // за допомоги циклу вивести:
 // - користувачів зі статусом true
 // for (const user of users) {
