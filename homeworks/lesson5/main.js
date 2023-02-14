@@ -1,24 +1,19 @@
+// ВСЕ ЗРОБИТИ СТРІЛОЧНИМИ ФУНКЦІЯМИ!
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-function rectangleS (a,b) {
-    return a * b;
-}
+let rectangleS = (a,b) => a * b;
 
-console.log(rectangleS(10,20));
+console.log(rectangleS(5,4));
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
-    const PI = 3.14;
-function circleS (r) {
-    return PI * Math.pow(r,2);
-}
+const PI = 3.14;
+let circleS = (r) => PI * Math.pow(r,2);
 
-console.log(circleS(5));
+console.log(circleS(10));
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-function cylinderS (h,r) {
-    return 2*PI*r*(h+r);
-}
+let cylinderS = (h,r) => (2*PI*r*(h+r)).toFixed(2);
 
-console.log(cylinderS(8,4));
+console.log(cylinderS(6,2));
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 let users = [
@@ -34,15 +29,16 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
-function forOf (array) {
+let forOf = (array) => {
     for (const arrayElement of array) {
         console.log(arrayElement);
     }
 }
+
 forOf(users);
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
-function createP (text) {
+let createP = (text) => {
     document.write(`<p>${text}</p>`);
 }
 
@@ -57,21 +53,22 @@ function createUl (text) {
 </ul>`);
 }
 
-createUl('item');
+createUl('data');
+
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
-function createUL (text,numLi) {
+let createUL = (text,numLi) => {
     document.write(`<ul>`);
     for (let i = 0; i < numLi; i++) {
         document.write(`<li>${text} ${i+1}</li>`);
     }
     document.write(`</ul>`);
 }
-createUL(`item`, 10);
+createUL(`data`, 5);
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 let array = [1, 2, 'one', 'two', true, false];
-function createList (array) {
+let createList = (array) => {
     document.write(`<ul>`);
     for (const item of array) {
         document.write(`<li>${item}</li>`);
@@ -314,7 +311,7 @@ let usersList = [
         }
     }
 ];
-function createDiv (array) {
+let createDiv = (array) => {
     document.write(`<div class="container">`);
     for (const arrayElement of array) {
         document.write(`<div>${arrayElement.id}. ${arrayElement.name} - ${arrayElement.username}.</div>`)
@@ -325,20 +322,20 @@ createDiv(usersList);
 
 // - створити функцію яка повертає найменьше число з масиву
 let numbers = [2,17,13,6,22,31,45,66,100,-18];
-function minNum (array) {
-let min = array [0];
-for (let i = 0; i < array.length; i++) {
-    if (array[i] < min) {
-        min = array[i];
+let minNum = (array) => {
+    let min = array [0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
     }
-}
-        return min;
+    return min;
 }
 
 console.log(minNum(numbers));
 
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-function sumArr (array) {
+let sumArr = (array) => {
     let sum = 0;
     for (const arrayElement of array) {
         sum += arrayElement;
@@ -350,7 +347,7 @@ console.log(sumArr(numbers));
 
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
-function swap (arr, index1, index2) {
+let swap = (arr, index1, index2) => {
     let value1 = arr[index1];
     let value2 = arr[index2];
     arr[index1] = value2;
@@ -362,7 +359,7 @@ console.log(swap(numbers,0,1));
 
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
-function exchange (sumUAH, currencyValues, exchangeCurrency) {
+let exchange = (sumUAH, currencyValues, exchangeCurrency) => {
     for (const currencyValue of currencyValues) {
         if (currencyValue.currency === exchangeCurrency) {
             return sumUAH / currencyValue.value;
@@ -372,3 +369,4 @@ function exchange (sumUAH, currencyValues, exchangeCurrency) {
 
 console.log(exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD'));
 console.log(exchange(4200,[{currency:'USD',value:40},{currency:'EUR',value:42}],'EUR'));
+
